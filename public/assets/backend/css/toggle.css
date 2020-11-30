@@ -1,0 +1,310 @@
+    .toggle {
+        position: relative;
+        display: block;
+        width: 30px;
+        /* height: 20px; */
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+        transform: translate3d(0, 0, 0);
+    }
+    
+    .toggle-sm {
+        position: relative;
+        display: block;
+        width: 30px;
+        /* height: 20px; */
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+        transform: translate3d(0, 0, 0);
+    }
+    
+    .toggle:before {
+        content: "";
+        position: relative;
+        top: 1px;
+        left: 1px;
+        width: 30px;
+        height: 15px;
+        display: block;
+        background: #f1556c;
+        border-radius: 12px;
+        transition: background 0.2s ease;
+    }
+    
+    .toggle-sm:before {
+        content: "";
+        position: relative;
+        top: 0.1px;
+        left: 1px;
+        width: 30px;
+        height: 12px;
+        display: block;
+        background: #fbb3be;
+        border-radius: 12px;
+        transition: background 0.2s ease;
+    }
+    
+    .toggle span {
+        position: absolute;
+        top: -0.6px;
+        left: 0;
+        width: 18px;
+        height: 18px;
+        display: block;
+        background: #fff;
+        border-radius: 50%;
+        box-shadow: 0 2px 6px rgba(154, 153, 153, 0.75);
+        transition: all 0.2s ease;
+    }
+    
+    .toggle-sm span {
+        position: absolute;
+        top: -0.6px;
+        left: 0;
+        width: 14px;
+        height: 14px;
+        display: block;
+        background: #fff;
+        border-radius: 50%;
+        box-shadow: 0 2px 6px rgba(154, 153, 153, 0.75);
+        transition: all 0.2s ease;
+    }
+    
+    .toggle span svg {
+        margin: 4px;
+        margin-top: -1px;
+        fill: none;
+    }
+    
+    .toggle-sm span svg {
+        margin: 2px;
+        margin-top: -7px;
+        fill: none;
+    }
+    
+    .toggle span svg path {
+        stroke: #f1556c;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-dasharray: 24;
+        stroke-dashoffset: 0;
+        transition: all 0.5s linear;
+    }
+    
+    .toggle-sm span svg path {
+        stroke: #f1556c;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-dasharray: 24;
+        stroke-dashoffset: 0;
+        transition: all 0.5s linear;
+    }
+    
+    .cbx:checked+.toggle:before {
+        background: #1abc9c;
+    }
+    
+    .cbx:checked+.toggle-sm:before {
+        background: #97e7d7;
+    }
+    
+    .cbx:checked+.toggle span {
+        transform: translateX(18px);
+    }
+    
+    .cbx:checked+.toggle-sm span {
+        transform: translateX(18px);
+    }
+    
+    .cbx:checked+.toggle span path {
+        stroke: #1abc9c;
+        stroke-dasharray: 25;
+        stroke-dashoffset: 25;
+    }
+    
+    .cbx:checked+.toggle-sm span path {
+        stroke: #1abc9c;
+        stroke-dasharray: 25;
+        stroke-dashoffset: 25;
+    }
+    /*333333333333333333333333333333333333333333333333333  */
+    
+    .switch {
+        height: 24px;
+        display: block;
+        position: relative;
+        cursor: pointer;
+    }
+    
+    .switch input {
+        display: none;
+    }
+    
+    .switch input+span {
+        padding-left: 50px;
+        min-height: 24px;
+        line-height: 24px;
+        display: block;
+        color: #f1556c;
+        position: relative;
+        vertical-align: middle;
+        white-space: nowrap;
+        -webkit-transition: color 0.3s ease;
+        transition: color 0.3s ease;
+    }
+    
+    .switch input+span:before,
+    .switch input+span:after {
+        content: "";
+        display: block;
+        position: absolute;
+        border-radius: 12px;
+    }
+    
+    .switch input+span:before {
+        top: 0;
+        left: 0;
+        width: 40px;
+        height: 21px;
+        background: #fbb3be;
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+    
+    .switch input+span:after {
+        width: 16px;
+        height: 16px;
+        background: #fff;
+        top: 3px;
+        left: 3px;
+        box-shadow: 0 1px 3px rgba(18, 22, 33, 0.1);
+        -webkit-transition: all 0.45s ease;
+        transition: all 0.45s ease;
+    }
+    
+    .switch input+span em {
+        width: 8px;
+        height: 7px;
+        background: #f1556c;
+        position: absolute;
+        left: 7px;
+        bottom: 8px;
+        border-radius: 2px;
+        display: block;
+        z-index: 1;
+        -webkit-transition: all 0.45s ease;
+        transition: all 0.45s ease;
+    }
+    
+    .switch input+span em:before {
+        content: "";
+        width: 2px;
+        height: 2px;
+        border-radius: 1px;
+        background: #fff;
+        position: absolute;
+        display: block;
+        left: 50%;
+        top: 50%;
+        margin: -1px 0 0 -1px;
+    }
+    
+    .switch input+span em:after {
+        content: "";
+        display: block;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        border: 1px solid #f1556c;
+        border-bottom: 0;
+        width: 6px;
+        height: 4px;
+        left: 1px;
+        bottom: 6px;
+        position: absolute;
+        z-index: 1;
+        -webkit-transform-origin: 0 100%;
+        transform-origin: 0 100%;
+        -webkit-transition: all 0.45s ease;
+        transition: all 0.45s ease;
+        -webkit-transform: rotate(-35deg) translate(0, 1px);
+        transform: rotate(-35deg) translate(0, 1px);
+    }
+    
+    .switch input+span strong {
+        font-weight: normal;
+        position: relative;
+        display: block;
+        top: 1px;
+    }
+    
+    .switch input+span strong:before,
+    .switch input+span strong:after {
+        font-size: 14px;
+        font-weight: 500;
+        display: block;
+        font-family: "Mukta Malar", Arial;
+        -webkit-backface-visibility: hidden;
+    }
+    
+    .switch input+span strong:before {
+        content: "";
+        -webkit-transition: all 0.3s ease 0.2s;
+        transition: all 0.3s ease 0.2s;
+    }
+    
+    .switch input+span strong:after {
+        content: "";
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: #97e7d7;
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        -webkit-transform: translate(2px, 0);
+        transform: translate(2px, 0);
+    }
+    
+    .switch input:checked+span:before {
+        background: #97e7d7;
+    }
+    
+    .switch input:checked+span:after {
+        background: #fff;
+        -webkit-transform: translate(18px, 0);
+        transform: translate(18px, 0);
+    }
+    
+    .switch input:checked+span em {
+        -webkit-transform: translate(18px, 0);
+        transform: translate(18px, 0);
+        background: #1abc9c;
+    }
+    
+    .switch input:checked+span em:after {
+        border-color: #1abc9c;
+        -webkit-transform: rotate(0deg) translate(0, 0);
+        transform: rotate(0deg) translate(0, 0);
+    }
+    
+    .switch input:checked+span strong:before {
+        color: #f1556c;
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        -webkit-transform: translate(-2px, 0);
+        transform: translate(-2px, 0);
+    }
+    
+    .switch input:checked+span strong:after {
+        opacity: 1;
+        visibility: visible;
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+        -webkit-transition: all 0.3s ease 0.2s;
+        transition: all 0.3s ease 0.2s;
+    }
