@@ -38,3 +38,7 @@ function(){
 
 Route::get('/free','HomeController@freeFiles')->name('freefiles');
 Route::get('/info/seller','HomeController@seller')->name('seller');
+Route::get('/info/affilate','HomeController@affilate')->name('affilate');
+Route::get('/upload','HomeController@upload')->name('upload');
+Route::get('/forum','HomeController@forum')->name('forum');
+Route::get('/collection','HomeController@collection')->name('collection');

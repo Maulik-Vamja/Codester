@@ -2,14 +2,14 @@
 <script src="{{ asset('assets/frontend/js/574580832686893.js' )}}" async=""></script>
 <script async="" src="{{ asset('assets/frontend/js/fbevents.js' )}}"></script>
 <script async="" src="{{ asset('assets/frontend/js/uwt.js' )}}"></script>
-{{-- <script type="application/ld+json">
+<script type="application/ld+json">
     {
   "@context": "http://schema.org",
   "@type": "WebSite",
   "name": "Codester",
   "url": "https://www.codester.com"
  }
-</script> --}}
+</script>
 
 
 <script type="text/javascript" src="{{ asset('assets/frontend/js/jquery.min.js') }}"></script>
@@ -37,6 +37,8 @@
 </script>
 <script type="text/javascript" src="{{ asset('assets/frontend/js/jquery.ui.highlight.min.js') }}">
 </script>
+
+@stack('js')
 
 <!-- Twitter universal website tag code -->
 <script>

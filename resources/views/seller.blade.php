@@ -4,17 +4,10 @@
 Sell Your Work
 @endsection
 
-@push('css')
-<link rel="stylesheet" href=" {{ asset('assets/frontend/css/soon.min.css') }} " type="text/css">
-@endpush
-
 @section('content')
 <div id="content" class="main-content bg-light">
-
-
-
     <div class="frontpage-header"
-        style="background: url(&quot;/static/img/backgrounds/frontpage-bg-morning.jpg&quot;) 50% 50% / cover no-repeat; position: relative;">
+        style="background: url(&quot; {{ asset('assets/frontend/images/frontpage-bg-morning.jpg') }} &quot;) 50% 50% / cover no-repeat; position: relative;">
         <div class="container">
             <div class="row">
                 <div class="col-md-10 col-md-offset-1 text-center">
@@ -26,12 +19,8 @@ Sell Your Work
                             and <strong>Plugins</strong> to the thousands of buyers on Codester.</h3>
                     </div>
                     <p class="text-center m-b-xxl wrapper">
-                        <a href="https://www.codester.com/upload" target="_blank"
-                            class="btn btn-lg btn-success text-lg m-b-lg m-r-md animated fadeInDown">Sign up
-                            now</a>
-
-
-
+                        <a href=" {{ Auth::check() ? route('upload') : route('register') }} " target="_blank"
+                            class="btn btn-lg btn-success text-lg m-b-lg m-r-md animated fadeInDown"> {{ Auth::check() ? 'Upload your work' : 'Sign Up now' }}</a>
                     </p>
                 </div>
             </div>
@@ -42,7 +31,7 @@ Sell Your Work
         <div class="container">
             <div class="row m-t-xl m-b-xxl">
                 <div class="col-sm-5">
-                    <img src="./Sell Your Work _ Codester_files/seller-screenshot.png" class="w-full">
+                    <img src=" {{ asset('assets/frontend/images/seller-screenshot.png') }}" class="w-full">
                 </div>
                 <div class="col-sm-7 text-lg">
                     <h3 class="text-dark font-bold m-b-lg">Your business is up and running in just a few steps
@@ -86,7 +75,7 @@ Sell Your Work
 
                 </div>
                 <div class="col-sm-5 text-center">
-                    <img src="./Sell Your Work _ Codester_files/pie-chart.png" class="w-lg">
+                    <img src=" {{ asset('assets/frontend/images/pie-chart.png') }} " class="w-lg">
                 </div>
             </div>
         </div>
@@ -126,19 +115,11 @@ Sell Your Work
             <div class="row m-t-xl m-b-xxl text-center">
                 <h3 class="text-dark font-bold m-b-lg fadeInDown animated" data-ride="animated"
                     data-animation="fadeInDown" data-delay="1200">Start your business today</h3>
-                <a href="https://www.codester.com/upload" class="btn btn-success w-xl btn-lg flipInX animated"
+                <a href="" class="btn btn-success w-xl btn-lg flipInX animated"
                     data-ride="animated" data-animation="flipInX" data-delay="1800">Sign up now</a>
 
             </div>
         </div>
     </div>
-
-
-
-
 </div>
 @endsection
-
-@push('js')
-<script type="text/javascript" src=" {{ asset('assets/frontend/js/soon.min.js') }}"></script>
-@endpush

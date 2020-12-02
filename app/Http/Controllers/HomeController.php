@@ -33,4 +33,20 @@ class HomeController extends Controller
     {
         return view('seller');
     }
+    public function upload()
+    {
+        return "hello";
+    }
+    public function affilate()
+    {
+        return view('affilate');
+    }
+    public function forum()
+    {
+        return view('forum');
+    }
+    public function collection()
+    {
+        return view('collection');
+    }
 }

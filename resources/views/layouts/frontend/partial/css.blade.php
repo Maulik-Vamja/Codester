@@ -1,5 +1,6 @@
 
 <link rel="stylesheet" href="{{ asset('assets/frontend/css/bootstrap.css' )}}" type="text/css">
+
 {{-- <link rel="stylesheet" href="{{ asset('assets/css/animate.css' )}}" type="text/css"> --}}
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -12,6 +13,8 @@
 <link rel="stylesheet" href="{{ asset('assets/frontend/css/app.css' )}}" type="text/css">
 <link rel="stylesheet" href="{{ asset('assets/frontend/css/style118.css' )}}" type="text/css">
 
+@stack('css')
+
 <style type="text/css">
 
     @font-face {
@@ -19,7 +22,7 @@
         font-style: normal;
         font-family: 'Circular-Loom';
 
-        src: url('https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Book-cd7d2bcec649b1243839a15d5eb8f0a3.woff2') format('woff2');
+        src: url( {{"asset('assets/frontend/fonts/CircularXXWeb-Book-cd7d2bcec649b1243839a15d5eb8f0a3.woff2')"}} ) format('woff2');
     }
 
     @font-face {
