@@ -5,7 +5,7 @@
 <head prefix="og: http://ogp.me/ns#">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-    <title> @yield('pageTitle') </title>
+    <title> @yield('pageTitle') | {{ config('app.name') }} </title>
     <meta name="description"
         content="Buy Code, Scripts, Themes, Templates and Plugins for PHP, JavaScript, HTML, WordPress, Android, iOS and more.">
     <meta name="keywords"
@@ -69,6 +69,6 @@
    @include('layouts.frontend.partial.model')
     @include('layouts.frontend.partial.footer')
     <!-- JS -->
-    @stack('js')
     @include('layouts.frontend.partial.js')
+    @stack('js')
 </html>

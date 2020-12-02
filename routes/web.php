@@ -19,7 +19,7 @@ Auth::routes();
 
 // Route::get('/home', 'HomeController@index')->name('home');
 
-Route::group([ 'as'=>'admin.','prefix' => 'maulik', 'namespace' => 'Admin'],
+Route::group([ 'as'=>'admin.','namespace' => 'Admin','middleware'=>['auth','admin']],
 function(){
     Route::get('dashboard','DashboardController@index')->name('dashboard');
 
@@ -32,6 +32,9 @@ function(){
         Route::get('/delete/{id}','CategoryController@destroy')->name('category.delete');
 
     });
-
-
 });
+
+// Public Home Page Routes
+
+Route::get('/free','HomeController@freeFiles')->name('freefiles');
+Route::get('/info/seller','HomeController@seller')->name('seller');

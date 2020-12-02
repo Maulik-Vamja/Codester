@@ -19,12 +19,8 @@ class RedirectIfAuthenticated
     public function handle($request, Closure $next, $guard = null)
     {
         if (Auth::guard($guard)->check() && Auth::user()->role->id == 1) {
-            echo " <script> console.log('redi if'); </script> ";
-            exit;
             return redirect()->route('admin.dashboard');
-        }elseif(Auth::guard($guard)->check() && Auth::user()->role->id == 2 ){
-            echo " <script> console.log('redi else'); </script> ";
-            exit;
+        }elseif(Auth::guard($guard)->check() && Auth::user()->role->id != 1 ){
             return redirect()->route('home');
         }else{
             return $next($request);

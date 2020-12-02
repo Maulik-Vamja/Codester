@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use Illuminate\Support\Facades\Auth;
 use Closure;
 
 class AdminMiddleware
@@ -18,6 +19,8 @@ class AdminMiddleware
         
         if (Auth::check() && Auth::user()->role->id == 1 ) {
             return $next($request);
+        }elseif(Auth::check() && Auth::user()->role->id == 2 ){
+            return redirect()->route('home');
         }else{
             return redirect()->route('login');
         }

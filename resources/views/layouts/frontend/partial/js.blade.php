@@ -1,7 +1,7 @@
-<script async="" src="{{ asset('assets/js/analytics.js' )}}"></script>
-<script src="{{ asset('assets/js/574580832686893.js' )}}" async=""></script>
-<script async="" src="{{ asset('assets/js/fbevents.js' )}}"></script>
-<script async="" src="{{ asset('assets/js/uwt.js' )}}"></script>
+<script async="" src="{{ asset('assets/frontend/js/analytics.js' )}}"></script>
+<script src="{{ asset('assets/frontend/js/574580832686893.js' )}}" async=""></script>
+<script async="" src="{{ asset('assets/frontend/js/fbevents.js' )}}"></script>
+<script async="" src="{{ asset('assets/frontend/js/uwt.js' )}}"></script>
 {{-- <script type="application/ld+json">
     {
   "@context": "http://schema.org",
@@ -12,8 +12,8 @@
 </script> --}}
 
 
-{{-- <script type="text/javascript" src="{{ asset('assets/js/jquery.min.js') }}"></script> --}}
-<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="{{ asset('assets/frontend/js/jquery.min.js') }}"></script>
+
 <script type="text/javascript" src="{{ asset('assets/frontend/js/jquery.lightbox.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('assets/frontend/js/redactor.js') }}"></script>
 <script type="text/javascript" src="{{ asset('assets/frontend/js/source.js') }}"></script>
