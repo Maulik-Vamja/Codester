@@ -10,9 +10,7 @@ Buy Code, Scripts, Themes, Plugins and more | Codester
 
 @section('content')
 <div id="content" class="main-content bg-light">
-
     <!--  -->
-    
     <div class="bg-black lter frontpage-header"
         style="background: url('{{ asset('public/assets/images/frontpage-bg-morning.jpg') }}') 50% 50% / cover no-repeat; position: relative;">
         <div class="container">
@@ -44,7 +42,7 @@ Buy Code, Scripts, Themes, Plugins and more | Codester
                         </form>
                         <!-- / search form -->
 
-                        {{-- <script type="application/ld+json">
+                        <script type="application/ld+json">
                             {
                             "@context": "http://schema.org",
                             "@type": "WebSite",
@@ -55,11 +53,9 @@ Buy Code, Scripts, Themes, Plugins and more | Codester
                                 "query-input": "required name=search_term_string"
                             }
                             }
-                        </script> --}}
+                        </script>
 
                         <div class="m-b-lg">
-                            <a href=""
-                                class="btn btn-lg btn-success text-lg m-r-md  m-b-sm ">Create a free account</a>
                             <a href=""
                                 class="btn btn-lg btn-transparant-white m-r-md b-white text-lg text-white  m-b-sm  ">Browse
                                 new items</a>

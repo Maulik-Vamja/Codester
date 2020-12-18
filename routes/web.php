@@ -19,9 +19,9 @@ Auth::routes();
 
 // Route::get('/home', 'HomeController@index')->name('home');
 
-Route::group([ 'as'=>'admin.','namespace' => 'Admin','middleware'=>['auth','admin']],
+Route::group(['as'=>'admin.','namespace' => 'Admin','middleware'=>['auth','admin']],
 function(){
-    Route::get('dashboard','DashboardController@index')->name('dashboard');
+    Route::get('/dashboard','DashboardController@index')->name('dashboard');
 
     Route::group(['prefix'=> 'categories'],function(){
         Route::get('/','CategoryController@index')->name('category');
@@ -31,6 +31,14 @@ function(){
         Route::post('/update/{id}','CategoryController@update')->name('category.update');
         Route::get('/delete/{id}','CategoryController@destroy')->name('category.delete');
 
+    });
+    Route::group(['prefix' => '/subcategories'],function(){
+        Route::get('/','SubCategoryController@index')->name('subcategory');
+    Route::get('/create','SubCategoryController@create')->name('subcategory.create');
+    Route::post('/store','SubCategoryController@store')->name('subcategory.store');
+    Route::get('/edit/{id}','SubCategoryController@edit')->name('subcategory.edit');
+    Route::post('/update/{id}','SubCategoryController@update')->name('subcategory.update');
+    Route::get('/delete/{id}','SubCategoryController@destroy')->name('subcategory.delete');
     });
 });
 

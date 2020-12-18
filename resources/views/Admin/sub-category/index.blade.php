@@ -1,14 +1,7 @@
 @extends('layouts.backend.app')
 
 @section('pageTitle')
-    Category
-@endsection
-
-@section('upperCss')
-<link href=" {{ asset('assets/backend/libs/datatables/dataTables.bootstrap4.css') }}" rel="stylesheet" type="text/css" />
-<link href="{{ asset('assets/backend/libs/datatables/responsive.bootstrap4.css') }}" rel="stylesheet" type="text/css" />
-<link href="{{ asset('assets/backend/libs/datatables/buttons.bootstrap4.css') }}" rel="stylesheet" type="text/css" />
-<link href="{{ asset('assets/backend/libs/datatables/select.bootstrap4.css') }}" rel="stylesheet" type="text/css" />
+    Sub Category
 @endsection
 
 @section('content')
@@ -38,8 +31,8 @@
                 <div class="card-body">
 
                     {{-- @can('add-category', Auth::user()) --}}
-                        <a href=" {{ route('admin.category.create') }} " class="btn btn-outline-blue btn-rounded waves-effect waves-light mb-2 "  style="text-transform: capitalize;">
-                            <i class="fe-plus"></i> Add Categorie</a>
+                        <a href=" {{ route('admin.subcategory.create') }} " class="btn btn-outline-blue btn-rounded waves-effect waves-light mb-2 "  style="text-transform: capitalize;">
+                            <i class="fe-plus"></i> Add Sub Categorie</a>
                             @if (session('succesMsg'))
                             <div class="alert alert-success" id="success-alert" role="alert">
                                 {{ session('succesMsg') }}
@@ -51,27 +44,24 @@
                         <thead class="thead-light">
                             <tr>
                                 <th style="hidden">#</th>
-                                <th>Categorie Name</th>
+                                <th>Sub Categorie Name</th>
+                                <th>Main Categorie Name</th>
                                 <th>Image</th>
-                                <th>Slug</th>
+                                <th>Description</th>
                                 <th >Action</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($categories as $categorie)
+                            @foreach ($sub_categories as $categorie)
                                 <tr>
                                     <td>{{ $categorie->id }}</td>
                                     <td>{{ $categorie->name }}</td>
+                                    <td>{{ $categorie->category->name }}</td>
                                     <td> <img height='50' width='50' src=" {{ asset($categorie->image) }} " alt="{{ $categorie->name }}"></td>
-                                    <td>{{ $categorie->slug }}</td>
-                                    {{-- <td>
-                                        <button class="btn status-change  {{$categorie->status == 1?"btn-outline-primary":"btn-outline-danger"}} btn-rounded waves-effect waves-light btn-sm" value="{{$categorie->status==1 ? 'Active':'Disable'}}" >{{$categorie->status== 1 ? "Active" : "Disable"}}</button>
-                                    </td> --}}
+                                    <td>{{ Str::limit($categorie->description,60) }}</td>
                                     <td> 
-                                        <a href=" {{ route('admin.category.delete',$categorie->id) }} " class="mr-1 text-danger remove_categorie" title="Delete Categorie" ><i class="fe-trash"></i></a>
-                                        {{-- @can('update-category', Auth::user()) --}}
-                                            <a href=" {{ route('admin.category.edit',$categorie->id) }} " class="mr-1 text-primary update_categorie" title="Update Categorie" ><i class="fe-edit"></i></a>
-                                        {{-- @endcan --}}
+                                        <a href=" {{ route('admin.subcategory.delete',$categorie->id) }} " class="mr-1 text-danger remove_categorie" title="Delete Categorie" ><i class="fe-trash"></i></a>
+                                            <a href=" {{ route('admin.subcategory.edit',$categorie->id) }} " class="mr-1 text-primary update_categorie" title="Update Categorie" ><i class="fe-edit"></i></a>
                                     </td>
                                 </tr>
                             @endforeach

@@ -16,9 +16,21 @@
                     </a>
                 </li>
                 <li>
-                    <a href=" {{ route('admin.category') }} ">
+                    <a href="{{ route('admin.category') }}">
                         <i class="fe-list"></i>
-                        <span> Category </span>
+                        <span> Categories </span>
+                    </a>
+                </li>
+                <li>
+                    <a href=" {{ route('admin.subcategory') }} ">
+                        <i class="fe-list"></i>
+                        <span> Sub Category </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fe-list"></i>
+                        <span> Child Category </span>
                     </a>
                 </li>
             </ul>

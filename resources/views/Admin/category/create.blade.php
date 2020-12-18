@@ -1,7 +1,7 @@
 @extends('layouts.backend.app')
 
 @section('pageTitle')
-    Add Category
+Add Category
 @endsection
 
 @section('content')
@@ -34,13 +34,41 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="categorie-name">Categorie Name</label>
-                                    <input class="form-control" type="text" id="categorie_name" required="" name="categorie_name" placeholder="Enter Category Name">
-                                    <input type="hidden" id="table_id" name="table_id" value="0">
+                                    <input class="form-control" type="text" id="categorie_name" required=""
+                                        name="categorie_name" placeholder="Enter Category Name">
+                                    {{-- <input type="hidden" id="table_id" name="table_id" value="0"> --}}
                                 </div>
-        
+                                @error('categorie_name')
+                                <span class="text-danger">
+                                    {{ $message }}
+                                </span>
+                                @enderror
+                                <div class="form-group">
+                                    <label for="categorie-image">Categorie Image</label><br>
+                                    <input class="" type="file" id="" name="img">
+                                </div>
+                                @error('img')
+                                <span class="text-danger">
+                                    {{ $message }}
+                                </span>
+                                @enderror
+                                <div class="form-group">
+                                    <label for="categorie_desc">Description</label><br>
+                                    <textarea name="categorie_desc" id="" cols="30" rows="10"
+                                        class="form-control"></textarea>
+                                </div>
+                                @error('categorie_desc')
+                                <span class="text-danger">
+                                    {{ $message }}
+                                </span>
+                                @enderror
+
                                 <div class="form-group text-right">
-                                    <button class="btn btn-blue btn-rounded waves-effect waves-light btn-xs" type="submit">Save</button>
-                                    <a href=" {{ route('admin.category') }} " class="btn btn-danger btn-rounded waves-effect waves-light btn-xs" type="button" data-dismiss="modal">Cancel</a>
+                                    <button class="btn btn-blue btn-rounded waves-effect waves-light btn-xs"
+                                        type="submit">Save</button>
+                                    <a href=" {{ route('admin.category') }} "
+                                        class="btn btn-danger btn-rounded waves-effect waves-light btn-xs" type="button"
+                                        data-dismiss="modal">Cancel</a>
                                 </div>
                             </div>
                         </div>

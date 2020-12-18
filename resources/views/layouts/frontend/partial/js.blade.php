@@ -2,14 +2,14 @@
 <script src="{{ asset('assets/frontend/js/574580832686893.js' )}}" async=""></script>
 <script async="" src="{{ asset('assets/frontend/js/fbevents.js' )}}"></script>
 <script async="" src="{{ asset('assets/frontend/js/uwt.js' )}}"></script>
-<script type="application/ld+json">
+{{-- <script type="application/ld+json">
     {
   "@context": "http://schema.org",
   "@type": "WebSite",
   "name": "Codester",
   "url": "https://www.codester.com"
  }
-</script>
+</script> --}}
 
 
 <script type="text/javascript" src="{{ asset('assets/frontend/js/jquery.min.js') }}"></script>
@@ -54,38 +54,7 @@ twq('track', 'PageView');
 </script>
 <!-- End Twitter universal website tag code -->
 
-<!-- Facebook Pixel Code -->
-<script>
-    !function (f, b, e, v, n, t, s) {
-    if (f.fbq) return; n = f.fbq = function () {
-        n.callMethod ?
-            n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-    }; if (!f._fbq) f._fbq = n;
-    n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0;
-    t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s)
-}(window,
-    document, 'script', '//connect.facebook.net/en_US/fbevents.js');
 
-fbq('init', '574580832686893');
-fbq('track', "PageView");
-
-</script>
-<noscript><img height="1" width="1" style="display:none"
-        src="https://www.facebook.com/tr?id=574580832686893&ev=PageView&noscript=1" /></noscript>
-<!-- End Facebook Pixel Code -->
-<script>
-    (function (i, s, o, g, r, a, m) {
-    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-        (i[r].q = i[r].q || []).push(arguments)
-    }, i[r].l = 1 * new Date(); a = s.createElement(o),
-        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-ga('create', 'UA-16104985-4', 'codester.com');
-ga('require', 'displayfeatures');
-ga('send', 'pageview');
-
-</script>
 
 <div id="1606472926127" class="jquery-lightbox-overlay"
     style="position: fixed; top: 0px; left: 0px; opacity: 0.6; display: none; z-index: 99998;"></div>
@@ -113,8 +82,8 @@ ga('send', 'pageview');
         <div class="jquery-lightbox-border-bottom-right"></div>
     </div>
 </div>
-<script src="./Buy Code, Scripts, Themes, Plugins and more _ Codester_files/adsct" type="text/javascript"></script>
-</body>
+{{-- <script src="./Buy Code, Scripts, Themes, Plugins and more _ Codester_files/adsct" type="text/javascript"></script> --}}
+
 <loom-container id="lo-engage-ext-container">
     <div></div>
     <loom-shadow classname="resolved"></loom-shadow>

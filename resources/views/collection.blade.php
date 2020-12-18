@@ -2088,7 +2088,7 @@ document.sortbyform.sortby.options[document.sortbyform.sortby.selectedIndex].val
                 <div class="text-right m-b-sm">
                     <ul class="pagination pagination-md">
                         <li class="active"><a
-                                href="https://www.codester.com/collections/?p=1&amp;sort_by=&amp;order=desc"> 1</a></li>
+                                href="https://www.codester.com/collections+/6/?p=1&amp;sort_by=&amp;order=desc"> 1</a></li>
                         <li><a href="https://www.codester.com/collections/?p=2&amp;sort_by=&amp;order=desc"> 2</a></li>
                         <li><a href="https://www.codester.com/collections/?p=3&amp;sort_by=&amp;order=desc"> 3</a></li>
                         <li><a href="https://www.codester.com/collections/?p=4&amp;sort_by=&amp;order=desc"> 4</a></li>

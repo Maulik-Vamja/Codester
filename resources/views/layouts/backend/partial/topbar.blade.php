@@ -8,8 +8,8 @@
                         <input type="text" class="form-control" placeholder="Search...">
                         <div class="input-group-append">
                             <button class="btn" type="submit">
-                                    <i class="fe-search"></i>
-                                </button>
+                                <i class="fe-search"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -17,7 +17,8 @@
         </li>
 
         <li class="dropdown notification-list">
-            <a class="nav-link dropdown-toggle  waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+            <a class="nav-link dropdown-toggle  waves-effect waves-light" data-toggle="dropdown" href="#" role="button"
+                aria-haspopup="false" aria-expanded="false">
                 <i class="fe-bell noti-icon"></i>
                 <span class="badge badge-danger rounded-circle noti-icon-badge">9</span>
             </a>
@@ -27,10 +28,10 @@
                 <div class="dropdown-item noti-title">
                     <h5 class="m-0">
                         <span class="float-right">
-                                <a href="#" class="text-dark">
-                                    <small>Clear All</small>
-                                </a>
-                            </span>Notification
+                            <a href="#" class="text-dark">
+                                <small>Clear All</small>
+                            </a>
+                        </span>Notification
                     </h5>
                 </div>
 
@@ -100,19 +101,21 @@
 
                 <!-- All-->
                 <a href="javascript:void(0);" class="dropdown-item text-center text-primary notify-item notify-all">
-                        View all
-                        <i class="fi-arrow-right"></i>
-                    </a>
+                    View all
+                    <i class="fi-arrow-right"></i>
+                </a>
 
             </div>
         </li>
 
         <li class="dropdown notification-list">
-            <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                <img src="assets/images/users/user-1.jpg" alt="user-image" class="rounded-circle">
+            <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown" href="#"
+                role="button" aria-haspopup="false" aria-expanded="false">
+                <img src=" {{ asset('assets/backend/images/users/user-1.jpg') }} " alt="user-image"
+                    class="rounded-circle">
                 <span class="pro-user-name ml-1">
-                        Geneva <i class="mdi mdi-chevron-down"></i> 
-                    </span>
+                    {{ Auth::user()->username }} <i class="mdi mdi-chevron-down"></i>
+                </span>
             </a>
             <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
                 <!-- item-->
@@ -145,15 +148,15 @@
                     <i class="fe-log-out"></i>
                     <span>Logout</span>
                 </a> --}}
-                <a  href="{{ route('logout') }}" class="dropdown-item notify-item" onclick="event.preventDefault();
+                <a href="{{ route('logout') }}" class="dropdown-item notify-item" onclick="event.preventDefault();
                                                     document.getElementById('logout-form').submit();">
-                                 <i class="fe-log-out"></i>
-                                 <span>Logout</span>
-                            </a>
+                    <i class="fe-log-out"></i>
+                    <span>Logout</span>
+                </a>
 
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                @csrf
-                            </form>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                </form>
 
             </div>
         </li>
@@ -171,12 +174,12 @@
     <div class="logo-box">
         <a href="index.html" class="logo text-center">
             <span class="logo-lg">
-                    <img src="  assets/images/logo-light.png" alt="" height="18">
-                    <!-- <span class="logo-lg-text-light">UBold</span> -->
+                <img src="  assets/images/logo-light.png" alt="" height="18">
+                <!-- <span class="logo-lg-text-light">UBold</span> -->
             </span>
             <span class="logo-sm">
-                    <!-- <span class="logo-sm-text-dark">U</span> -->
-            <img src="assets/images/logo-sm.png" alt="" height="24">
+                <!-- <span class="logo-sm-text-dark">U</span> -->
+                <img src="assets/images/logo-sm.png" alt="" height="24">
             </span>
         </a>
     </div>
@@ -184,11 +187,9 @@
     <ul class="list-unstyled topnav-menu topnav-menu-left m-0">
         <li>
             <button class="button-menu-mobile waves-effect waves-light">
-                    <i class="fe-menu"></i>
-                </button>
+                <i class="fe-menu"></i>
+            </button>
         </li>
 
-       
-      
     </ul>
 </div>
